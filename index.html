@@ -153,6 +153,11 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    main.animation-finished .cube-button,
+    main.animation-finished .title-button {
+      cursor: default;
+    }
+
     .title-button:focus-visible {
       border-radius: 0.2em;
       outline: 3px solid #c4ff9b;
@@ -343,6 +348,7 @@
         button.setAttribute("aria-label", title.textContent);
         cubeButton.remove();
         scene.classList.remove("exploding");
+        scene.classList.add("animation-finished");
       }, 950);
     };
 
